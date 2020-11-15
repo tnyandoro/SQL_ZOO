@@ -25,3 +25,7 @@ FROM world
 WHERE name LIKE '%United%'
 
 ---Two ways to be big
+SELECT name, population, area
+FROM world
+WHERE area > 3000000 OR population > 250000000
+
