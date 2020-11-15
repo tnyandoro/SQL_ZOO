@@ -71,3 +71,13 @@ WHERE subject = 'Medicine' AND yr < 1910
  SELECT *
   FROM nobel
 WHERE winner = 'PETER GRÜNBERG'; 
+
+---Apostrophe
+
+
+
+---
+SELECT winner, yr, subject
+  FROM nobel
+WHERE winner LIKE 'Sir%' 
+ ORDER BY yr desc,  winner ASC; 
