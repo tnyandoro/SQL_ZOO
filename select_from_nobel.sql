@@ -76,7 +76,7 @@ WHERE winner = 'PETER GRÜNBERG';
 
 
 
----
+---Knights of the realm
 SELECT winner, yr, subject
   FROM nobel
 WHERE winner LIKE 'Sir%' 
