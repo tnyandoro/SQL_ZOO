@@ -73,7 +73,9 @@ WHERE subject = 'Medicine' AND yr < 1910
 WHERE winner = 'PETER GRÜNBERG'; 
 
 ---Apostrophe
-
+SELECT *
+  FROM nobel
+WHERE winner = 'EUGENE O''NEILL'; 
 
 
 ---Knights of the realm
