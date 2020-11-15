@@ -49,5 +49,7 @@ SELECT name, capital
 FROM world
 WHERE LENGTH(name) = LENGTH(capital);
 
+---Show the name and the capital where the first letters of each match. Don't include countries where the name and the capital are the same word.
+
 
 
