@@ -19,3 +19,18 @@ AND subject = 'Physics'
 SELECT yr, subject
 FROM nobel
 WHERE winner = 'Albert Einstein';
+
+---Recent Peace Prizes
+SELECT name, subject
+FROM nobel
+WHERE yr >= 2000
+
+---Recent Peace Prizes
+SELECT winner
+FROM nobel
+WHERE yr >= 2000 AND subject = 'Peace';
+
+---Literature in the 1980's
+SELECT yr, subject, winner
+FROM nobel
+WHERE subject = 'Literature' AND yr BETWEEN 1980 AND 1989; 
