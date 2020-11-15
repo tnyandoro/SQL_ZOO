@@ -53,3 +53,15 @@ SELECT yr, subject, winner
   FROM nobel
 WHERE yr = 1980 AND subject = 'physics' 
   OR yr = 1984 AND subject = 'chemistry' ;
+
+---Exclude Chemists and Medics
+SELECT yr, subject, winner 
+  FROM nobel
+WHERE yr= 1980 
+  AND subject NOT IN('Chemistry', 'Medicine');  
+
+ ---Early Medicine, Late Literature
+ SELECT *
+  FROM nobel
+WHERE subject = 'Medicine' AND yr < 1910
+  OR subject = 'Literature' AND yr >= 2004; 
