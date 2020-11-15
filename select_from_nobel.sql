@@ -34,3 +34,18 @@ WHERE yr >= 2000 AND subject = 'Peace';
 SELECT yr, subject, winner
 FROM nobel
 WHERE subject = 'Literature' AND yr BETWEEN 1980 AND 1989; 
+
+---Only Presidents
+SELECT * FROM nobel
+ WHERE winner IN ('Theodore Roosevelt',
+                  'Woodrow Wilson',
+                  'Jimmy Carter',
+                   'Barack Obama'
+)
+
+---Show the winners with first name John
+SELECT winner
+FROM nobel
+WHERE winner LIKE 'john %';
+
+---Chemistry and Physics from different years
