@@ -12,5 +12,11 @@ WHERE continent = 'Europe' and ( (gdp/population) >
 (SELECT gdp/population from world where name = 'United Kingdom'))
 
 
----
+-- Order by name of the country.
+SELECT name, continent
+FROM world
+WHERE 
+continent IN (SELECT continent 
+      FROM world
+      WHERE name = 'Australia' OR name = 'Argentina') ORDER BY name
 
