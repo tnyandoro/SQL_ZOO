@@ -65,3 +65,9 @@ WHERE yr= 1980
   FROM nobel
 WHERE subject = 'Medicine' AND yr < 1910
   OR subject = 'Literature' AND yr >= 2004; 
+
+ ---Harder Questions
+
+ SELECT *
+  FROM nobel
+WHERE winner = 'PETER GRÜNBERG'; 
