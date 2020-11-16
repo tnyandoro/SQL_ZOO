@@ -42,5 +42,13 @@ FROM route a JOIN route b ON
   JOIN stops stopb ON (b.stop=stopb.id)
 WHERE stopa.name='Craiglockhart' and stopb.name = 'Tollcross';
 
----
+---Give a distinct list of the stops which may be reached from 'Craiglockhart' by taking one bus, including 'Craiglockhart' itself, offered by the LRT company. Include the company and bus no. of the relevant services.
+select  stopb.name,a.company,a.num
+from route as a join route as b 
+on (a.company=b.company and a.num=b.num)
+join stops as stopa on (stopa.id=a.stop)
+join stops as stopb on (stopb.id=b.stop)
+where stopa.name='Craiglockhart';
+
+
 
