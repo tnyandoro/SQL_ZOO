@@ -57,3 +57,18 @@ actor on actorid = id WHERE ord != 1
 AND name = 'Harrison Ford');
 
 ---Lead actors in 1962 movies
+SELECT  movie.title, actor.name
+FROM  actor
+JOIN  casting ON actor.id = casting.actorid
+JOIN  movie ON movie.id = casting.movieid
+WHERE  casting.ord = 1 AND movie.yr = 1962;
+
+---Busy years for Rock Hudson
+SELECT title,name FROM movie m
+JOIN casting c on m.id = c.movieid
+JOIN actor a on c.actorid = a.id
+WHERE movieid in (SELECT movieid FROM casting
+WHERE actorid IN (
+  SELECT id FROM actor
+  WHERE name='Julie Andrews'))
+  and ord = 1;
