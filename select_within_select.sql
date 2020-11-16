@@ -66,4 +66,6 @@ WHERE continent NOT IN
 SELECT name, continent FROM world x
 WHERE population > ALL
 	(SELECT 3*population FROM world y
-		WHERE y.continent=x.continent AND x.name <> y.name);     
+		WHERE y.continent=x.continent AND x.name <> y.name);    
+
+---     
