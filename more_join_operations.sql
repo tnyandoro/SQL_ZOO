@@ -41,3 +41,12 @@ FROM  actor
 JOIN  casting ON actor.id = casting.actorid
 JOIN  movie ON movie.id = casting.movieid
 WHERE  movie.title = 'Alien';
+
+---List the films in which 'Harrison Ford' has appeared
+SELECT title FROM movie
+WHERE id IN (
+SELECT movieid FROM casting
+JOIN actor ON actorid = id
+WHERE name = 'Harrison Ford')
+
+---Harrison Ford as a supporting actor
