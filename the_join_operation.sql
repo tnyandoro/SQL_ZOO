@@ -12,3 +12,8 @@ WHERE  id = 1012;
 SELECT  goal.player, goal.teamid, game.stadium, game.mdate
 FROM  game JOIN goal ON (game.id = goal.matchid)
 WHERE  goal.teamid = 'GER';
+
+---Show the team1, team2 and player for every goal scored by a player called Mario player LIKE 'Mario%'
+SELECT  game.team1, game.team2, goal.player
+FROM  game JOIN goal ON (game.id = goal.matchid)
+WHERE  goal.player LIKE 'Mario%';
