@@ -50,3 +50,10 @@ JOIN actor ON actorid = id
 WHERE name = 'Harrison Ford')
 
 ---Harrison Ford as a supporting actor
+SELECT title FROM movie 
+WHERE id IN (
+SELECT movieid FROM casting JOIN 
+actor on actorid = id WHERE ord != 1
+AND name = 'Harrison Ford');
+
+---Lead actors in 1962 movies
