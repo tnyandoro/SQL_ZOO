@@ -30,9 +30,14 @@ FROM movie
 WHERE title = 'Casablanca'
 
 ---Obtain the cast list for 'Casablanca'.
-
-
 SELECT name 
 FROM actor 
 JOIN casting ON id = actorid 
 WHERE movieid = 11768;
+
+---Obtain the cast list for the film 'Alien'
+SELECT  actor.name
+FROM  actor
+JOIN  casting ON actor.id = casting.actorid
+JOIN  movie ON movie.id = casting.movieid
+WHERE  movie.title = 'Alien';
